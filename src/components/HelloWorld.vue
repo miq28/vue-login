@@ -59,6 +59,9 @@ const axios = require("axios");
 // const got = require("./node_modules/got");
 // import got from '@/got'
 
+// const baseUrl = "http://localhost:8000";
+const baseUrl = "https://ptb1prod.herokuapp.com";
+
 export default {
   name: "HelloWorld",
   data() {
@@ -76,7 +79,7 @@ export default {
   },
   methods: {
     login() {
-      const baseUrl = "http://localhost:8000";
+      // const baseUrl = "http://localhost:8000";
       // const baseUrl = "https://ptb1prod.herokuapp.com";
 
       axios
@@ -111,7 +114,7 @@ export default {
     // },
 
     showprofile() {
-      const baseUrl = "http://localhost:8000";
+      // const baseUrl = "http://localhost:8000";
 
       axios
         .get(`${baseUrl}/api/users/me/`, {
@@ -127,7 +130,7 @@ export default {
         });
     },
     logout() {
-      const baseUrl = "http://127.0.0.1:8000";
+      // const baseUrl = "http://127.0.0.1:8000";
       console.log(this.token, "TOKEN");
       axios
         .post(`${baseUrl}/api/auth/revoke/`, {
