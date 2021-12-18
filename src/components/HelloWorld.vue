@@ -66,8 +66,8 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      username: "",
-      password: "",
+      username: "admin@admin.com",
+      password: "admin",
       message: "you are not logged in",
       token: "",
       ref_token: "",
